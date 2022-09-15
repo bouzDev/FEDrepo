@@ -58,27 +58,29 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 
 #### Screenreader
 
-Hier korte omschrijving (met indien nodig afbeeldingen)
+Linkjes worden voorgelezen in het menu die niet te zien zijn. Het beste zou zijn deze display:none maken todat mensen de link kiezen.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+De home link wordt voorgelezen als Evina. Dit is niet duidelijk voor mensen als ze erop klikken dat ze naar de home pagina gaan. Deze moet veranderd worden naar 'Home'.
+
+De headers die voorgelezen worden hebben niet de juiste hiërarchie. Een heading in een card die in een section zit is aangeduind als een kopstuk #2 terwijl dit een kopstuk #3 moet zijn.
+
+De linkjes hebben geen duidelijke benamingen. Dit kan anders door aan te geven wat er gebeurd als je daar op klikt.
 
 #### Muis en Toetsenbord
 
-Hier korte omschrijving (met indien nodig afbeeldingen)
+De tab gaat in de submenu die je niet kan zien. Het beste zou zijn dat de submenu links pas ziet wanneer je enter drukt.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+Heel veel buttons hebben geen focus state. Door een kleur verandering of omlijning toe te voegen is het duidelijker waar je precies bent.
 
 #### Motoriek (shocks, elastiekjes)
 
-Hier korte omschrijving (met indien nodig afbeeldingen)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+Je kan niet goed scrollen met spasme. Gelukkig kan je met de pijtjes naar beneden scrollen.
 
 #### Visueel (brillen, contrast, kleurenblind, dark/light).
 
-Hier korte omschrijving (met indien nodig afbeeldingen)
+De kleuren hebben een goeie contrast maakt niet uit welke kleurenblindheid.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+De bril met blur/glare laat zien dat niet alle teksten goed leesbaar zijn. Ik denk dat het juist belangerijk is dat in ieder geval de headings wat groter moeten zijn zodat mensen weten naar welk kopje ze kijken.
 
 </details>
 

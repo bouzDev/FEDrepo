@@ -1,30 +1,27 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-button, summary {
-	cursor: pointer;
+button,
+summary {
+    cursor: pointer;
 }
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+    /* startje */
+    --color-light: #ffffff;
+    --color-dark: #000000;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
@@ -33,7 +30,349 @@ button, summary {
 /* jouw code */
 
 body {
-  color:var(--color-text);
-  background-color:var(--color-background);
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    font-family: 'Everett';
+    font-weight: normal;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
+h2 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-size: calc(1.15rem + 1.28571vw);
+}
+
+p {
+    font-size: 0.875rem;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    text-align: center;
+    transition: background-color 0.4s ease-in, color 0.4s ease-in;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+button:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+body > header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    display: none;
+}
+
+body > header nav:first-of-type {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    transform: translateY(-100vh);
+    transition: transform 0.4s ease-in-out;
+}
+
+body > header details[open] + nav {
+    transform: translateY(0);
+}
+
+/* Ik heb de details gebruikt als overlay voor de navigation */
+body > header details::after {
+    z-index: -1;
+    background-color: var(--color-dark);
+    content: '';
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: top 0.4s ease-in-out;
+}
+
+body > header > details[open]::after {
+    top: 0;
+}
+
+body > header > details > summary {
+    width: 1.5rem;
+    height: 1.5rem;
+    list-style: none;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: gap 0.4s ease-in-out;
+}
+
+body > header > details[open] > summary {
+    gap: 0rem;
+}
+
+body > header > details > summary::before,
+body > header > details > summary::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1px;
+    background-color: var(--color-light);
+    transform: translateX(0px) rotate(0deg);
+    transition: all 0.4s ease-in-out;
+}
+
+body > header > details[open] > summary::before {
+    transform: translateY(11px) rotate(45deg);
+}
+
+body > header > details[open] > summary::after {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+/* https://stackoverflow.com/questions/6195329/how-can-you-hide-the-arrow-that-is-displayed-by-default-on-the-html5-details-e */
+body > header > details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
+body > header > details > summary::-webkit-details-marker /* Safari */ {
+    display: none;
+}
+
+body > header nav:first-of-type ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+body > header nav:first-of-type li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+}
+
+body > header nav:first-of-type li a {
+    color: var(--color-light);
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+body > header nav:first-of-type li:nth-of-type(1)::after,
+body > header nav:first-of-type li:nth-of-type(2)::after {
+    display: block;
+    content: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 9.5L18.5 15.5L12.5 21.5' stroke='white'/%3E%3C/svg%3E");
+}
+
+dl {
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: var(--color-dark);
+    width: 100%;
+    transform: translateX(100vw);
+    transition: transform 0.4s ease-in-out;
+}
+
+dl:target {
+    transform: translateX(0vw);
+}
+
+dl a {
+    display: block;
+    padding-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+dd {
+    position: relative;
+    top: -1.5rem;
+    margin-inline-start: 0;
+    white-space: nowrap;
+}
+
+dl dt:first-of-type,
+dl dd:first-of-type,
+dl dt:first-of-type a {
+    font-size: 0;
+}
+
+dl dt:first-of-type a::after {
+    content: url("data:image/svg+xml,%3Csvg width='9' height='16' viewBox='0 0 9 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4324 0.928932L1.36133 8L8.4324 15.0711' stroke='white'/%3E%3C/svg%3E ");
+    display: block;
+}
+
+main > header {
+    padding: 4rem 2rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    background-color: purple;
+}
+
+main > header h1 {
+    max-width: 17rem;
+}
+
+section:nth-of-type(1) {
+    padding: 4rem 2rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+}
+
+section:nth-of-type(1) h2 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+section:nth-of-type(1) h2 span:last-of-type {
+    align-self: flex-end;
+}
+
+section:nth-of-type(1) p {
+    text-align: center;
+}
+
+section:nth-of-type(2) {
+    padding: 4rem 2rem;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+section:nth-of-type(2) h2 + p::after {
+    margin-top: 3.5rem;
+    content: '';
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: #efefef;
+    display: block;
+}
+
+section:nth-of-type(2) ul {
+    width: 100vw;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+    padding: 3.5rem 2rem;
+    overflow-x: auto;
+    margin-left: -2rem;
+}
+
+section:nth-of-type(2) ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem 1.5rem 0;
+    box-shadow: 0 20px 72px rgb(0 0 0 / 7%), 0 10px 68px rgb(0 0 0 / 2%);
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 12.5rem;
+    max-width: 18rem;
+    flex: 1 0 25vw;
+}
+
+section:nth-of-type(2) ul li p {
+    flex-grow: 1;
+}
+
+section:nth-of-type(2) ul li q {
+    display: block;
+}
+
+section:nth-of-type(2) ul li img {
+    order: -1;
+    height: 50px;
+    width: fit-content;
+}
+
+section:nth-of-type(2) ul li a {
+    padding: 12px 25px;
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--color-dark);
+    background-color: #f9f9f9;
+    margin: 0 -1.5rem;
+}
+
+section:nth-of-type(3) {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+}
+
+section:nth-of-type(3) > ul {
+    list-style-type: none;
+    display: flex;
+}
+
+section:nth-of-type(3) > ul > li {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section:nth-of-type(3) > ul > li img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+section:nth-of-type(3) > ul ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+section:nth-of-type(3) > ul ul li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(3) > ul ul li span {
+    font-size: 3rem;
+}
+
+section:nth-of-type(3) > ul ul li sup {
+    font-size: 1.5rem;
+    padding-top: 0.5em;
+}
+
+@font-face {
+    font-family: 'Everett';
+    src: url('/fonts/TWKEverett-Regular-web.woff2') format('woff2'),
+        url('/fonts/TWKEverett-Regular-web.woff2') format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Everett';
+    src: url('/fonts/TWKEverett-Light-web.woff2') format('woff2'),
+        url('/fonts/TWKEverett-Light-web.woff') format('woff');
+    font-weight: light;
+}
