@@ -116,11 +116,12 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| Anwar          | student 2          | student 3    | student 4        |
 | -------------- | ------------------ | ------------ | ---------------- |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Sup tag        | en dit             | en ik dit    | en dan ik dat    |
+| A voor buttons | dit als er tijd is | nog een punt | dit wil ik zeker |
+| gebruiker voor | ...                | ...          | ...              |
+| target selec   | ...                | ...          | ...              |
 
 ### Verslag van meeting
 
