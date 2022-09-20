@@ -35,7 +35,7 @@ body {
     font-family: 'Everett';
     font-weight: normal;
     width: 100vw;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 h2 {
@@ -76,17 +76,34 @@ body > header {
     align-items: center;
     justify-content: space-between;
     padding: 4rem 2rem;
-    display: none;
+    overflow: hidden;
+}
+
+body > header > a {
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
 body > header nav:first-of-type {
-    position: relative;
+    z-index: 1;
+    position: absolute;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.875rem;
-    transform: translateY(-100vh);
+    transform: translateY(-200%);
     transition: transform 0.4s ease-in-out;
+    background-color: yellow;
+}
+
+body > header nav:last-of-type {
+    position: absolute;
+    bottom: 0;
 }
 
 body > header details[open] + nav {
@@ -108,6 +125,11 @@ body > header details::after {
 
 body > header > details[open]::after {
     top: 0;
+}
+
+body > header > details {
+    position: relative;
+    z-index: 2;
 }
 
 body > header > details > summary {
