@@ -26,13 +26,14 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="#products">Products</a>
-
+                        <input id="product-check" type="checkbox" />
+                        <label for="product-check">Products</label>
                         <dl id="products">
                             <dt>
-                                <a href="#">Back </a>
+                                <label for="product-check">Back</label>
                             </dt>
                             <dd>Go back to main menu</dd>
+
                             <dt>
                                 <a href="#"> DCBprotect </a>
                             </dt>
@@ -60,11 +61,12 @@
                         </dl>
                     </li>
                     <li>
-                        <a href="#resources">Resources</a>
+                        <input id="resources-check" type="checkbox" />
+                        <label for="resources-check">Resources</label>
 
                         <dl id="resources">
                             <dt>
-                                <a href="#">Back </a>
+                                <label for="resources-check">Resources</label>
                             </dt>
                             <dd>Go back to main menu</dd>
                             <dt>
@@ -563,9 +565,18 @@
                     results in a reduction of turnover for their clients.
                 </p>
                 <h3>A bespoke service</h3>
+                <p>
+                    Evina takes cybersecurity seriously. Its support is
+                    top-tier, perfectly tailored to the needs of its clients.
+                    Moreover, all of Evina’s dashboard tools are fully
+                    customizable to fit client requests
+                </p>
             </section>
             <section>
-                <h2>Take a step outside of closed ecosystems</h2>
+                <h2>
+                    <span>Take a step outside</span>
+                    <span>of closed ecosystems</span>
+                </h2>
                 <p>
                     In order to escape fraudsters, many companies have taken
                     refuge in protected but extremely expensive and limited
@@ -579,7 +590,10 @@
             <section>
                 <!-- Evina heeft deze header in de vorige section/div geplaats maar deze
             vindt ik beter passen in deze aparte section -->
-                <h2>Towards a new world of business opportunities</h2>
+                <h2>
+                    <span>Towards a new world </span>
+                    <span>of business opportunities</span>
+                </h2>
                 <ul>
                     <li>
                         <!-- Evina gebruikte hier een img zonder alt.. Ik ga hier een svg
@@ -694,19 +708,37 @@
             niet echt nadruk perse moet zijn op news maar wel alders gestijlt is -->
                 <!-- https://www.w3schools.com/tags/tag_em.asp -->
                 <h2>Latest <em>News</em></h2>
-                <ul>
-                    <li>
-                        <a href="">
-                            <h3>
-                                Payguru offers its merchants an extra security
-                                layer with Evina’s cyber protection
-                            </h3>
-                        </a>
-                        <img src="images/dummy-plaatje.jpg" alt="" />
+                <article>
+                    <a href="">
                         <time datetime="2022-08-22"> 22 August 2022 </time>
-                    </li>
-                    <!-- Hieronder komen er nog meer li's -->
-                </ul>
+                        <h3>
+                            Payguru offers its merchants an extra security layer
+                            with Evina’s cyber protection
+                        </h3>
+                        <img src="images/dummy-plaatje.jpg" alt="" />
+                    </a>
+                </article>
+                <article>
+                    <a href="">
+                        <time datetime="2022-08-22"> 22 August 2022 </time>
+                        <h3>
+                            Payguru offers its merchants an extra security layer
+                            with Evina’s cyber protection
+                        </h3>
+                        <img src="images/dummy-plaatje.jpg" alt="" />
+                    </a>
+                </article>
+                <article>
+                    <a href="">
+                        <time datetime="2022-08-22"> 22 August 2022 </time>
+                        <h3>
+                            Payguru offers its merchants an extra security layer
+                            with Evina’s cyber protection
+                        </h3>
+                        <img src="images/dummy-plaatje.jpg" alt="" />
+                    </a>
+                </article>
+
                 <a href="#">See all press releases</a>
             </section>
         </main>

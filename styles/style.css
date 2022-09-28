@@ -33,20 +33,24 @@ body {
     color: var(--color-light);
     background-color: var(--color-dark);
     font-family: 'Everett';
-    font-weight: normal;
     width: 100vw;
-    overflow-y: hidden;
 }
 
 h2 {
     font-weight: 300;
-    font-size: 1.5rem;
     line-height: 1.3;
     font-size: calc(1.15rem + 1.28571vw);
 }
 
+h3 {
+    font-weight: 300;
+    line-height: 1.15;
+    font-size: calc(1rem + 1.28571vw);
+}
+
 p {
     font-size: 0.875rem;
+    font-weight: light;
 }
 
 button {
@@ -59,6 +63,7 @@ button {
     transition: background-color 0.4s ease-in, color 0.4s ease-in;
     text-transform: uppercase;
     font-size: 0.75rem;
+    place-self: start start;
 }
 
 button:hover {
@@ -76,7 +81,6 @@ body > header {
     align-items: center;
     justify-content: space-between;
     padding: 4rem 2rem;
-    overflow: hidden;
 }
 
 body > header > a {
@@ -85,52 +89,13 @@ body > header > a {
     color: white;
 }
 
-body > header nav:first-of-type {
-    z-index: 1;
-    position: absolute;
-    padding: 4rem 2rem;
-    margin-top: 4rem;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.875rem;
-    transform: translateY(-200%);
-    transition: transform 0.4s ease-in-out;
-    background-color: yellow;
-}
-
-body > header nav:last-of-type {
-    position: absolute;
-    bottom: 0;
-}
-
-body > header details[open] + nav {
-    transform: translateY(0);
-}
-
-/* Ik heb de details gebruikt als overlay voor de navigation */
-body > header details::after {
-    z-index: -1;
-    background-color: var(--color-dark);
-    content: '';
-    position: fixed;
-    top: -100vh;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transition: top 0.4s ease-in-out;
-}
-
-body > header > details[open]::after {
-    top: 0;
-}
-
+/*! HAMBURGER MENU */
 body > header > details {
     position: relative;
     z-index: 2;
 }
+
+/*? Ik heb de details gebruikt als overlay voor de navigation */
 
 body > header > details > summary {
     width: 1.5rem;
@@ -147,6 +112,7 @@ body > header > details[open] > summary {
     gap: 0rem;
 }
 
+/*? HAMBURGER MENU ANIMATIE */
 body > header > details > summary::before,
 body > header > details > summary::after {
     content: '';
@@ -172,6 +138,31 @@ body > header > details > summary::-webkit-details-marker /* Safari */ {
     display: none;
 }
 
+/* LEVEL 1 NAVIGATIE */
+body > header nav:first-of-type {
+    z-index: 1;
+    position: absolute;
+    padding: 8rem 2rem 4rem;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out 0.2s;
+    background-color: #000000;
+}
+
+/*? MENU ANIMATIE */
+body > header details[open] ~ nav:first-of-type {
+    transform: translateY(0);
+    transition: transform 0.4s ease-in-out 0s;
+}
+
 body > header nav:first-of-type ul {
     list-style-type: none;
     display: flex;
@@ -184,6 +175,10 @@ body > header nav:first-of-type li {
     justify-content: space-between;
     align-items: center;
     height: 2rem;
+}
+
+body > header nav:first-of-type input {
+    display: none;
 }
 
 body > header nav:first-of-type li a {
@@ -200,21 +195,23 @@ body > header nav:first-of-type li:nth-of-type(2)::after {
     content: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 9.5L18.5 15.5L12.5 21.5' stroke='white'/%3E%3C/svg%3E");
 }
 
+/* LEVEL 2 NAVIGATIE */
 dl {
     top: 0;
-    right: 0;
     position: absolute;
+    padding: 8rem 0rem 2rem;
     background-color: var(--color-dark);
-    width: 100%;
-    transform: translateX(100vw);
+    width: 100vw;
+    height: 100vh;
     transition: transform 0.4s ease-in-out;
+    transform: translateX(100vw);
 }
 
-dl:target {
+input:checked ~ dl {
     transform: translateX(0vw);
 }
 
-dl a {
+dl dt a {
     display: block;
     padding-bottom: 2rem;
     font-size: 1.25rem;
@@ -236,10 +233,43 @@ dl dt:first-of-type a {
     font-size: 0;
 }
 
-dl dt:first-of-type a::after {
+dl dt:first-of-type label::after {
     content: url("data:image/svg+xml,%3Csvg width='9' height='16' viewBox='0 0 9 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.4324 0.928932L1.36133 8L8.4324 15.0711' stroke='white'/%3E%3C/svg%3E ");
     display: block;
+    margin-bottom: 2rem;
 }
+
+/* Language buttons */
+body > header nav:last-of-type {
+    transform: translateY(0%);
+    position: absolute;
+    top: 100vh;
+    bottom: 0;
+    z-index: 4;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 1rem;
+    transition: transform 0.4s ease-in-out 0s;
+}
+
+body > header details[open] ~ nav:last-of-type {
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out 0.3s;
+}
+
+body > header nav:last-of-type button {
+    border: 0px;
+    border-radius: 0;
+    padding: 1rem 0rem;
+}
+
+body > header nav:last-of-type button:nth-of-type(2) {
+    border-bottom: 1px solid white;
+}
+
+/* **** */
+/* MAIN */
+/* **** */
 
 main > header {
     padding: 4rem 2rem;
@@ -254,13 +284,32 @@ main > header h1 {
     max-width: 17rem;
 }
 
-section:nth-of-type(1) {
-    padding: 4rem 2rem;
-    width: 100vw;
-    height: 100vh;
+/*! section */
+/* section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
     gap: 3.75rem;
+} */
+
+section {
+    padding: 4rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 500px) 1fr;
+    row-gap: 3rem;
+    column-gap: 2rem;
+}
+
+/*! section */
+section > * {
+    grid-column: 2 / 3;
+}
+
+/*! section */
+section:nth-of-type(1) {
+    width: 100vw;
+    height: 100vh;
 }
 
 section:nth-of-type(1) h2 {
@@ -278,8 +327,8 @@ section:nth-of-type(1) p {
     text-align: center;
 }
 
+/*! section */
 section:nth-of-type(2) {
-    padding: 4rem 2rem;
     background-color: var(--color-light);
     color: var(--color-dark);
 }
@@ -295,14 +344,13 @@ section:nth-of-type(2) h2 + p::after {
 }
 
 section:nth-of-type(2) ul {
-    width: 100vw;
-    height: 100%;
     list-style-type: none;
     display: flex;
     gap: 25px;
     padding: 3.5rem 2rem;
     overflow-x: auto;
-    margin-left: -2rem;
+    grid-column: 1 / 4;
+    width: 100%;
 }
 
 section:nth-of-type(2) ul li {
@@ -341,11 +389,8 @@ section:nth-of-type(2) ul li a {
     margin: 0 -1.5rem;
 }
 
+/*! section */
 section:nth-of-type(3) {
-    padding: 4rem 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3.75rem;
 }
 
 section:nth-of-type(3) > ul {
@@ -383,6 +428,108 @@ section:nth-of-type(3) > ul ul li span {
 section:nth-of-type(3) > ul ul li sup {
     font-size: 1.5rem;
     padding-top: 0.5em;
+}
+
+/*! section */
+section:nth-of-type(4) {
+    background-color: #101117;
+}
+
+section:nth-of-type(4) > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-of-type(4) li {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 56px auto;
+    gap: 60px;
+    padding: 35px 0;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.16);
+}
+
+section:nth-of-type(4) li svg {
+    border: 1px solid hsla(0, 0%, 100%, 0.16);
+    border-radius: 4px;
+    background-color: black;
+    width: 56px;
+    height: 56px;
+    padding: 5px;
+}
+
+/*! section */
+section:nth-of-type(5) {
+    background-color: white;
+    color: black;
+}
+
+section:nth-of-type(5) h2 em {
+    display: block;
+}
+
+section:nth-of-type(6) h2,
+section:nth-of-type(7) h2 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section:nth-of-type(6) h2 span:last-of-type,
+section:nth-of-type(7) h2 span:last-of-type {
+    align-self: flex-end;
+}
+
+section:nth-of-type(7) > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+section:nth-of-type(7) li {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 56px auto;
+    gap: 60px;
+}
+
+section:nth-of-type(7) li svg {
+    width: 56px;
+    height: 56px;
+}
+
+section:nth-of-type(7) li p {
+    max-width: 132px;
+}
+
+section:nth-of-type(7) button {
+    width: fit-content;
+}
+
+section:nth-of-type(8) {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+section:nth-of-type(8) article {
+    display: flex;
+
+    list-style-type: none;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.16);
+}
+
+section:nth-of-type(8) article a {
+    display: flex;
+    flex-direction: column;
+    gap: 1.825rem;
+}
+
+section:nth-of-type(8) article img {
+    max-height: 138px;
+    align-self: start;
+    order: -1;
 }
 
 @font-face {

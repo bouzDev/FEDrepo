@@ -110,7 +110,7 @@ De bril met blur/glare laat zien dat niet alle teksten goed leesbaar zijn. Ik de
 
 ### Stand van zaken
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik had problemen met de target selector en de animatie van een zijmenu.
 
 ### Agenda voor meeting
 
@@ -127,10 +127,9 @@ samen met je groepje opstellen
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
--   punt 1
--   punt 2
--   nog een punt
--   ...
+-   Sup tag kan ik gewoon gebruiken.
+-   Ik heb uiteindelijk geen target selector gebruikt omdat ik er een bug kwam
+-   Ik heb nu een checkbox gebruikt voor een animatie
 
 </details>
 
@@ -147,20 +146,18 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| -------------- | ------------------ | ------------ | ---------------- |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Anwar                 | student 2          | student 3    | student 4        |
+| --------------------- | ------------------ | ------------ | ---------------- |
+| Media query volgorde. | en dit             | en ik dit    | en dan ik dat    |
+| Hoe appear animatie?  | dit als er tijd is | nog een punt | dit wil ik zeker |
+|                       | ...                | ...          | ...              |
 
 ### Verslag van meeting
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
--   punt 1
--   punt 2
--   nog een punt
--   ...
+-   Media query beginnen met mobile en dan tablet en dan desktop
+-   Ik moet intersection obserber gebruiken.
 
 </details>
 
