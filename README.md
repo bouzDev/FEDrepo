@@ -140,7 +140,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik heb in plaats van een target selector die de zij menu opent een input checkbox met 2 labels gebruikt. De labels zorgen ervoor dat de checkbox getoggeld kunnen worden. Ik kan dan een het zijmenu tonen wanneer het gecheckt is en wanneer het uncheckt is dan gaat het weer naar de originele positie
 
 ### Agenda voor meeting
 
@@ -172,27 +172,22 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
 
 #### Screenreader
 
-Hier korte omschrijving (met indien nodig afbeeldingen)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+-   Alles een juiste naam geven dmv area-labels of correcte beschrijvingen.
 
 #### Muis en Toetsenbord
 
-Hier korte omschrijving (met indien nodig afbeeldingen)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+-   Navbar/hamburger menu openen wanneer je met de screen reader hier in terecht komt.
 
 #### Motoriek (shocks, elastiekjes)
 
-Hier korte omschrijving (met indien nodig afbeeldingen)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+-   Motoriek beperkt houd je ook niet tegen om de site te gebruiken.
 
 #### Visueel (brillen, contrast, kleurenblind, dark/light).
 
-Hier korte omschrijving (met indien nodig afbeeldingen)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+-   Door goed gebruik van contrast is kleurenblindheid geen probleem.
+-   Bij Central field loss wordt het wat lastiger ivm dat alles in het midden staat. Desondanks is de site wel goed te volgen.
+-   Combined loss maakt het lezen van de kleine teksten wel wat lastiger maar niet onmogelijk. Misschien kan je hier nog wat mee doen.
+-   Hemifield loss (half zicht) heeft weinig invloed op het gebruik van jouw site, dit heb je goed gedaan door de belangrijke info in het midden te zetten en eventuele bredere elementen dmv visual hints aan te geven.
 
 </details>
 
@@ -209,19 +204,20 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| -------------- | ------------------ | ------------ | ---------------- |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| student 1        | student 2          | student 3    | student 4        |
+| ---------------- | ------------------ | ------------ | ---------------- |
+| button all unset | en dit             | en ik dit    | en dan ik dat    |
+| svg animeren     | dit als er tijd is | nog een punt | dit wil ik zeker |
+| unset op media   |
+| query            | ...                | ...          | ...              |
 
 ### Verslag van meeting
 
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
--   punt 1
--   punt 2
--   nog een punt
+-   Foto's maken van oudere commits
+-   Document het menu
+-   Hoeft geen unset op media query wanneer van display flex naar display grid gaat.
 -   ...
 
 </details>
@@ -257,6 +253,7 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
 1. https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within
 2. https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
-3. ...
+3. https://www.youtube.com/watch?v=2IbRtjez6ag
+4.
 
 </details>

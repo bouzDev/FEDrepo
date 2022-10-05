@@ -458,17 +458,20 @@ section > * {
 }
 
 /*! section */
-#home > section:nth-of-type(4) {
+#home > section:nth-of-type(4),
+#career > section:nth-of-type(4) {
     background-color: #101117;
 }
 
-#home > section:nth-of-type(4) > ul {
+#home > section:nth-of-type(4) > ul,
+#career > section:nth-of-type(4) > ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
 }
 
-#home > section:nth-of-type(4) li {
+#home > section:nth-of-type(4) li,
+#career > section:nth-of-type(4) li {
     list-style-type: none;
     display: grid;
     grid-template-columns: 3.5rem auto;
@@ -606,11 +609,56 @@ section > * {
 }
 
 #career > header {
-    height: 50vw;
+    min-height: 50vw;
+    height: unset;
     padding-top: 180px;
-    padding-bottom: 200px;
     background-image: url(https://www.evina.com/wp-content/uploads/fly-images/1774/05-scaled-992x999999.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#career > section:nth-of-type(2) article {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.16);
+}
+
+#career > section:nth-of-type(2) h3 {
+    padding: 2rem 0rem 5rem;
+}
+
+#career > section:nth-of-type(2) p {
+    margin-bottom: 1rem;
+}
+
+#career > section:nth-of-type(2) ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+#career > section:nth-of-type(2) li::before {
+    content: '';
+    background: linear-gradient(266.23deg, #7f02fc 23.5%, #349bd5 146.97%);
+    display: block;
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    position: relative;
+    top: 0.8rem;
+    left: -1.5rem;
+}
+
+#career > section:nth-of-type(3) {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+#career > section:nth-of-type(4) li img {
+    border: 1px solid hsla(0, 0%, 100%, 0.16);
+    border-radius: 0.25rem;
+    background-color: black;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.4rem;
+    object-fit: contain;
 }
 
 /*! footer */
@@ -693,15 +741,15 @@ footer ul a {
 
 @font-face {
     font-family: 'Everett';
-    src: url('/fonts/TWKEverett-Regular-web.woff2') format('woff2'),
-        url('/fonts/TWKEverett-Regular-web.woff2') format('woff');
+    src: url('../fonts/TWKEverett-Regular-web.woff2') format('woff2'),
+        url('../fonts/TWKEverett-Regular-web.woff2') format('woff');
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'Everett';
-    src: url('/fonts/TWKEverett-Light-web.woff2') format('woff2'),
-        url('/fonts/TWKEverett-Light-web.woff') format('woff');
+    src: url('..//fonts/TWKEverett-Light-web.woff2') format('woff2'),
+        url('..//fonts/TWKEverett-Light-web.woff') format('woff');
     font-weight: light;
 }
 
@@ -783,7 +831,9 @@ footer ul a {
     #home > section:nth-of-type(4) > p {
         grid-column: 3 / 4;
     }
-    #home > section:nth-of-type(4) > ul {
+
+    #home > section:nth-of-type(4) > ul,
+    #career > section:nth-of-type(4) > ul {
         list-style-type: none;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -861,6 +911,44 @@ footer ul a {
         grid-column: 2/3;
     }
 
+    #career > section:nth-of-type(1) h2 {
+        grid-column: 2/3;
+    }
+
+    #career > section:nth-of-type(1) p {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    #career > section:nth-of-type(2) article:nth-last-of-type(1) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    #career > section:nth-of-type(2) article:nth-last-of-type(2) {
+        grid-column: 3/4;
+    }
+
+    #career > section:nth-of-type(3) {
+        grid-template-columns:
+            1fr minmax(auto, 14rem) minmax(auto, 14rem) minmax(auto, 14rem)
+            1fr;
+    }
+
+    #career > section:nth-of-type(3) p:nth-of-type(1) {
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+
+    #career > section:nth-of-type(3) p:nth-of-type(2),
+    #career > section:nth-of-type(3) p:nth-of-type(3) {
+        grid-column: 3/4;
+    }
+
+    #career > section:nth-of-type(3) p:nth-of-type(4) {
+        grid-column: 4/5;
+        grid-row: 2/4;
+    }
     footer form {
         padding: 4rem 2rem;
         display: grid;
