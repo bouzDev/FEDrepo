@@ -196,8 +196,6 @@ Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er v
 
 ### Stand van zaken
 
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
 ### Agenda voor meeting
 
 samen met je groepje opstellen
@@ -226,20 +224,21 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Je uitkomst - karakteristiek screenshots:
 
-  <img src="../readme-images/Evina-Homepage-new.webp" width="375px" alt="Op de career pagina is een filter en voor de rest veel plekken waar ik kan werken met grid en flex layout ">
-  <img src="../readme-images/Evina-Careerpage-new.webp" width="375px" alt="Op de career pagina is een filter en voor de rest veel plekken waar ik kan werken met grid en flex layout ">
+  <img src="../readme-images/Evina-Homepage-new.webp" width="375px" alt="Mijn homepagina helemaal uitgewerkt in detail">
+  <img src="../readme-images/Evina-Careerpage-new.webp" width="375px" alt="De career pagina helemaal uitgewerkt">
 
 ### Dit ging goed/Heb ik geleerd:
 
-Korte omschrijving met plaatjes
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+Nieuwe dingen geleerd zoals aria-label, direct sibling selector en intersection observer.
+Ik heb display grid gebruikt om geen div als container te gebruiken.
 
 ### Dit was lastig/Is niet gelukt:
 
-Korte omschrijving met plaatjes
+Ik vond het lastig om geen Divs te gebruiken maar dat was juist de challenge voor mij.
+Dit heeft er voor gezorgd dat het wat langer duurde om deze website te maken.
+Ook wilde ik geen javascript gebruiken voor sommige interacties.
+Het is mij niet gelukt om het formulier te maken die zou verschijnen wanneer je op een button klikt
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
 ## Bronnenlijst
@@ -255,5 +254,8 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 4. https://css-tricks.com/what-does-playsinline-mean-in-web-video/
 5. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 6. https://css-tricks.com/snippets/css/complete-guide-grid/
+7. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label
+8. https://www.w3schools.com/tags/tag_summary.asp
+9. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
 
 </details>
