@@ -255,8 +255,8 @@ Korte omschrijving met plaatjes
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
+1. https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within
+2. https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
 3. ...
 
 </details>
