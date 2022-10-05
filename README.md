@@ -38,12 +38,12 @@ https://www.evina.com/
 #### Screenshot(s) van de eerste pagina (small screen):
 
 Home pagina
-<img src="readme-images/Evina-Homepage" width="375px" alt="Op de home pagina zijn er appear animation, slider, counter animation, scroll animation">
+<img src="../readme-images/Evina-Homepage.webp" width="375px" alt="Op de home pagina zijn er appear animation, slider, counter animation, scroll animation">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 
 Career pagina
-<img src="readme-images/Evina-Careerpage.jpg" width="375px" alt="Op de career pagina is een filter en voor de rest veel plekken waar ik kan werken met grid en flex layout ">
+<img src="../readme-images/Evina-Careerpage.webp" width="375px" alt="Op de career pagina is een filter en voor de rest veel plekken waar ik kan werken met grid en flex layout ">
 
 </details>
 
@@ -91,15 +91,11 @@ De bril met blur/glare laat zien dat niet alle teksten goed leesbaar zijn. Ik de
 
 ### de hele pagina:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="../readme-images/Breakdownschets.jpg" width="375px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu):
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-### wellicht nog een dynamisch deel (bijv filter):
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="../readme-images/Breakdownschets-menu.jpg" width="375px" alt="breakdown van een dynamisch deel">
 
 </details>
 
@@ -140,7 +136,9 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 
-Ik heb in plaats van een target selector die de zij menu opent een input checkbox met 2 labels gebruikt. De labels zorgen ervoor dat de checkbox getoggeld kunnen worden. Ik kan dan een het zijmenu tonen wanneer het gecheckt is en wanneer het uncheckt is dan gaat het weer naar de originele positie
+Ik heb in plaats van een target selector die de zij menu opent een input checkbox met 2 labels gebruikt.
+De labels zorgen ervoor dat de checkbox getoggeld kunnen worden. Ik kan dan een het zijmenu tonen wanneer
+het gecheckt is en wanneer het uncheckt is dan gaat het weer naar de originele positie
 
 ### Agenda voor meeting
 
@@ -218,7 +216,6 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 -   Foto's maken van oudere commits
 -   Document het menu
 -   Hoeft geen unset op media query wanneer van display flex naar display grid gaat.
--   ...
 
 </details>
 
@@ -229,7 +226,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Je uitkomst - karakteristiek screenshots:
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="../readme-images/Evina-Homepage-new.webp" width="375px" alt="Op de career pagina is een filter en voor de rest veel plekken waar ik kan werken met grid en flex layout ">
+  <img src="../readme-images/Evina-Careerpage-new.webp" width="375px" alt="Op de career pagina is een filter en voor de rest veel plekken waar ik kan werken met grid en flex layout ">
 
 ### Dit ging goed/Heb ik geleerd:
 
@@ -254,6 +252,8 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 1. https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within
 2. https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
 3. https://www.youtube.com/watch?v=2IbRtjez6ag
-4.
+4. https://css-tricks.com/what-does-playsinline-mean-in-web-video/
+5. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+6. https://css-tricks.com/snippets/css/complete-guide-grid/
 
 </details>
